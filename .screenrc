@@ -1,0 +1,35 @@
+escape ^x^x
+
+# encoding
+defencoding UTF-8
+encoding UTF-8 UTF-8
+
+# caption/status
+#caption always "%{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d(%D) %{=b wb}%c"
+#caption always "%{= wk} %-w%{=u dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d %{=b wb}%c"
+caption always "%{= wk} %-w%{= gk}%n %t%{-}%+w"
+hardstatus ignore
+
+# bind
+bind 2 split
+bind o focus
+bind 1 only
+bind 0 remove
+bind \^ resize
+
+bind b windowlist -b
+
+# 256 color
+defbce on
+#term xterm-256color
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
+# hoka
+defscrollback 10000
+startup_message off
+autodetach on
+nethack on
+
+vbell off
+
+chdir $HOME

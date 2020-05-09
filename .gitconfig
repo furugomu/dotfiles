@@ -1,0 +1,6 @@
+[alias]
+	st = status
+	c = commit
+	co = checkout
+[grep]
+	lineNumber = true

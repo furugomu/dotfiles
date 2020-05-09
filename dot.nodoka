@@ -1,0 +1,160 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Nodoka - dotjp.nodoka
+# Copyright (C) 1999-2005, TAGA Nayuta <nayuta@users.sourceforge.net>
+#
+# Modify by applet on 2010-03-29
+
+define "USE104"
+define "USEdefault"
+
+# まずキーボード定義を読み込む。
+if ( USE104 )
+  include "104.nodoka"			# 104 キーボード設定
+  if ( USE109on104 )
+    include "109on104.nodoka"		# 104 キーボードを 109 キーボード風に
+  endif
+else
+  include "109.nodoka"			# 109 キーボード設定
+  if ( USE104on109 )
+    include "104on109.nodoka"		# 109 キーボードを 104 キーボード風に
+  endif
+endif
+
+if ( USEdefault )
+  include	"default2.nodoka"	# Emacs ライクなさまざまな設定
+endif
+
+
+# Global keymap 設定
+keymap Global
+
+
+# 以下は、便宜上、設定するもの
+key C-A-D = &DescribeBindings 		# 現在のキーマップのログ出力
+#key F1 = &SendPostMessage("PostTray",,"のどか", 0x0205, 0, 0)	# のどかのメニューを開く
+
+
+# シフト+F2: 日本語キーボード、英語キーボード 切り替えトグル
+if ( USE109 )
+  if ( USE104on109 )
+    key S-F2 => &IconColor(0) &HelpMessage("Reloaded", "日本語 109 キーボード") &LoadSetting("日本語 109 キーボード")
+  else
+    key S-F2 => &IconColor(2) &HelpMessage("Reloaded", "日本語 109 キーボード (104 風)") &LoadSetting("日本語 109 キーボード (104 風)")
+  endif
+endif
+if ( USE104 )
+  if ( USE109on104 )
+    key S-F2 => &IconColor(0) &HelpMessage("Reloaded", "英語 104 キーボード") &LoadSetting("英語 104 キーボード")
+  else
+    key S-F2 => &IconColor(2) &HelpMessage("Reloaded", "英語 104 キーボード (109 風)") &LoadSetting("英語 104 キーボード (109 風)")
+  endif
+endif
+
+
+# 以下に、ご自身の設定を御書き下さい。
+
+keymap Global
+ key C-M-K	= $WindowClose		# ウィンドウを閉じる
+ key S-Space => $ToggleIME
+ key M-F5 => &LoadSetting &HelpMessage(Mayu, "再読込完了") # 設定ファイルの読み込み
+ key C-M-F => C-W-Right
+ key C-M-B => C-W-Left
+
+keymap EmacsEdit
+ key C-J = &Default
+
+window Xyzzy /xyzzy\.exe:/ : Global
+ key C-M-R = &Default
+ key C-S-K C-A-K = &Default
+ key C-G = &Default
+
+window Firefox /MozillaWindowClass/ : EmacsEdit
+ key C-l = &Default
+
+# Google Chrome
+## アドレスバー
+window ChromeTextEdit /Chrome_OmniboxView/ : EmacsEdit
+## 本体
+window GoogleChrome /chrome.exe/ : EmacsEdit
+ key C-l = &Default
+# ページ内検索
+window ViewsTextfieldEdit /ViewsTextfieldEdit/ : EditControl
+
+window LibreOffice /soffice.bin/ : EmacsEdit
+
+window Skype /TChatRichEdit/ : EmacsEdit
+
+window IE /Internet Explorer_Server/ : EmacsEdit
+
+window putty /putty/ : Global
+ key *RAlt = *LAlt
+
+window FoxitReader /classFoxitReader/ : EmacsMove
+
+window MonoDevelop /MonoDevelop/ : EmacsEdit
+
+window Excel /XLMAIN/ : EmacsEdit
+
+window JoyHack /RecENT\.exe/ : EmacsEdit
+
+window krile /krile\.exe/ : EmacsEdit
+
+window brackets /Brackets\.exe/ : Global
+ key C-M => Enter
+ key C-H => Backspace
+
+window onenote /OneNote::DocumentCanvas/ : EmacsEdit
+
+# C-x の後のキーは変換したくない
+keymap2 AtomC-X: Global
+keymap2 AtomC-C: Global
+
+window atom /atom\.exe/ : Global
+ #key C-p => Up
+ #key C-n => Down
+ #key C-b => Left
+ #key C-f => Right
+ #key C-a => Home
+ #key C-e => End
+ key C-m => Return
+ key C-h => Backspace
+ #key C-x => &Default &Prefix(AtomC-X)
+ #key C-c => &Prefix(AtomC-C)
+
+window slack /slack\.exe/ : EmacsEdit
+ # channel
+ key M-p => M-Up
+ key M-n => M-Down
+ # unread channel
+ key S-M-p => S-M-Up
+ key S-M-n => S-M-Down
+
+window kobito /kobito\.exe/ : EmacsEdit
+
+window limechat /LimeChat2\.exe/ : EmacsEdit
+
+#window edge /Microsoft Edge/ : EmacsEdit
+window edge /ApplicationFrameHost\.exe/ : EmacsEdit
+
+# RPG ツクール
+window rpgtkool /RGSS Player/ : Global
+ key *h => *Left
+ key *j => *Down
+ key *k => *Up
+ key *l => *Right
+ key *Space => *Enter
+
+# RLogin Docker で C-p がアレ
+window RLogin /RLogin.exe/ : Global
+ key C-p => Up
+
+# Visual Studio Code
+window vscode /Code\.exe/ : Global
+ key C-m => Enter
+ key C-i => Tab
+
+# VBA
+window vba /VbaWindow/ : EmacsEdit
+
+# Kindle
+window kindle /Kindle\.exe/ : EmacsEdit

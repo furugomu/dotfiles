@@ -1,0 +1,152 @@
+"*":
+  "atom-typescript": {}
+  "atomic-emacs":
+    useNativeNavigationKeys: true
+  "autocomplete-plus": {}
+  core:
+    disabledPackages: [
+      "project-manager"
+      "rails-transporter"
+      "linter-rubocop"
+    ]
+    ignoredNames: [
+      ".git"
+      ".DS_Store"
+      ".apm"
+      ".node-gyp"
+      ".npm"
+      "node_modules"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    fontFamily: "\"Consolas\" \"Meiryo\""
+    fontSize: 12
+    invisibles: {}
+    preferredLineLength: 100
+    scrollPastEnd: true
+    showIndentGuide: true
+    showInvisibles: true
+    softWrap: true
+    softWrapHangingIndent: 1
+    tabType: "soft"
+    useShadowDOM: true
+  "exception-reporting":
+    userId: "3360d305-1778-912a-62ff-83817232552c"
+  "go-plus":
+    formatTool: "gofmt"
+  "japanese-wrap":
+    characterWidth: {}
+  "line-ending-selector":
+    defaultLineEnding: "LF"
+  linter:
+    showInfoMessages: true
+    statusBar: "Show all errors"
+  "linter-eslint":
+    disableEslintIgnore: true
+    disableWhenNoEslintConfig: false
+  "linter-rubocop":
+    rubocopExecutablePath: "C:\\Ruby22-x64\\bin\\rubocop.bat"
+  "linter-scalac":
+    scalacExecutablePath: "C:\\Program Files (x86)\\scala\\bin\\scalac.bat"
+  "linter-ui-default":
+    showPanel: true
+  metrics:
+    userId: "58fa2b828b83946556d5d0b5b261e7b7344da5fe"
+  "metro-ui":
+    themeAccentColor: "#107c10"
+  "recent-files":
+    updated: false
+  "show-ideographic-space": {}
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
+".basic.html.text":
+  editor:
+    preferredLineLength: 100
+    softWrapHangingIndent: 1
+".coffee.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 2
+".erb.html.text":
+  editor:
+    tabLength: 4
+".git-commit.text":
+  editor:
+    preferredLineLength: 100
+".git-config.source":
+  editor:
+    preferredLineLength: 100
+".git-rebase.text":
+  editor:
+    preferredLineLength: 100
+".go.source":
+  editor:
+    preferredLineLength: 100
+".gohtml.html.text":
+  editor:
+    preferredLineLength: 100
+".gotemplate.source":
+  editor:
+    preferredLineLength: 100
+".ini.source":
+  editor:
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+".js.regexp.replacement.source":
+  editor:
+    normalizeIndentOnPaste: "a"
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+".js.regexp.source":
+  editor:
+    normalizeIndentOnPaste: "a"
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+".js.source":
+  editor:
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+    tabLength: 2
+".json.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 2
+".litcoffee.source":
+  editor:
+    preferredLineLength: 100
+".ruby.source":
+  editor:
+    tabLength: 2
+".scala.source":
+  editor:
+    preferredLineLength: 100
+    tabLength: 2
+".slim.text":
+  editor:
+    preferredLineLength: 100
+    softWrapHangingIndent: 2
+".source.ts":
+  editor:
+    preferredLineLength: 100
+    softWrapHangingIndent: 1
+".source.tsx":
+  editor:
+    preferredLineLength: 100
+    softWrapHangingIndent: 1
+"atomic-emacs":
+  useNativeNavigationKeys: true
+"exception-reporting":
+  userId: "d245161c-5f3f-b571-10c7-e8dd18f813d5"
+metrics:
+  userId: "58fa2b828b83946556d5d0b5b261e7b7344da5fe"
+"recent-files":
+  updated: false
+welcome:
+  showOnStartup: false

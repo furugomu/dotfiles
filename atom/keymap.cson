@@ -1,0 +1,64 @@
+'body':
+  'ctrl-g': 'core:cancel'
+  'ctrl-h': 'core:backspace'
+  'ctrl-p': 'core:move-up'
+  'ctrl-n': 'core:move-down'
+  'ctrl-x': 'unset!'
+  'ctrl-/': 'core:undo'
+  'ctrl-v': 'core:page-down'
+  'alt-v': 'core:page-up'
+
+'atom-workspace':
+  'ctrl-x /': 'tree-view:toggle-focus'
+  'ctrl-x \\': 'tree-view:toggle-focus'
+
+'atom-workspace atom-text-editor:not(.mini)':
+  'ctrl-/': 'unset!'
+  'alt->': 'core:move-to-bottom'
+
+'atom-workspace atom-text-editor':
+  'ctrl-r': 'incremental-search:backward'
+  'ctrl-s': 'incremental-search:forward'
+  'ctrl-_': 'core:redo'
+  'alt-r': 'find-and-replace:show'
+
+'atom-text-editor:not(.autocomplete-active)':
+  #'ctrl-n': 'atomic-emacs:next-line'
+  #'down': 'atomic-emacs:next-line'
+  'ctrl-i': 'editor:auto-indent'
+
+'atom-text-editor':
+  'alt-g g': 'go-to-line:toggle'
+  'ctrl-a': 'editor:move-to-first-character-of-line'
+  'ctrl-d': 'core:delete'
+  'ctrl-e': 'editor:move-to-end-of-screen-line'
+  'ctrl-f': 'atomic-emacs:forward-char'
+  'ctrl-m': 'editor:newline'
+#  'ctrl-space': 'atomic-emacs:set-mark'
+  'ctrl-alt-space': 'find-and-replace:select-next'
+
+  'end': 'editor:move-to-end-of-screen-line'
+
+  'ctrl-x f': 'application:open-file'
+  'ctrl-c ctrl-f': 'tree-view:toggle-focus'
+  'ctrl-x ctrl-f': 'fuzzy-finder:toggle-file-finder'
+
+  'ctrl-c ctrl-t': 'user:switch-test-code'
+
+'.platform-win32':
+  'ctrl-g': 'core:cancel'
+
+'.platform-win32 atom-text-editor':
+  'ctrl-d': 'core:delete'
+
+'.isearch':
+  'ctrl-[': 'core:confirm'
+
+'atom-text-editor[data-grammar^="source ts"]':
+  'ctrl-space': 'atomic-emacs:set-mark'
+
+# incremental-search をうわがき
+'.platform-win32 atom-workspace .isearch atom-text-editor, .platform-linux atom-workspace .isearch atom-text-editor':
+  'ctrl-i': 'editor:auto-indent'
+'.platform-win32 atom-workspace atom-text-editor:not(.mini), .platform-linux atom-workspace atom-text-editor:not(.mini)':
+  'ctrl-i': 'editor:auto-indent'
