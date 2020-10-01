@@ -66,6 +66,8 @@ fi
 # env
 export EDITOR=vim
 PATH="$HOME/bin:$PATH"
+PATH="$PATH:$HOME/.cargo/bin"
+PATH="$PATH:/mnt/c/Users/${USER}/AppData/Local/Programs/Microsoft\ VS\ Code/bin"
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
 # aliases
@@ -82,3 +84,4 @@ export NVM_DIR="$HOME/.nvm"
 # git
 source ~/git-prompt.sh
 PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
+
