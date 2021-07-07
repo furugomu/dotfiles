@@ -35,3 +35,6 @@ compinit
 # End of lines added by compinstall
 
 [ -f $HOME/.zshrc.local ] && source $HOME/.zshrc.local
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
