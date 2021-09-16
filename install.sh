@@ -14,4 +14,4 @@ done
 # fish
 mkdir -p $HOME/.config
 echo fish
-ln -sf $dotfiles/.config/fish $HOME/.config/fish
+ln -sf $dotfiles/fish $HOME/.config/fish
