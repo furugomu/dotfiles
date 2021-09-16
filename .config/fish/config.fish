@@ -8,16 +8,19 @@ if status is-interactive
 end
 
 # go
-set -gx GOPATH $HOME/go
+set -x GOPATH $HOME/go
+if test -d $GOROOT
+  set -x PATH $GOROOT/bin $PATH
+end
 
 # rbenv
 if test -d $HOME/.rbenv
-  set fish_user_paths $HOME/.rbenv/bin
+  set -x PATH $HOME/.rbenv/bin $PATH
   rbenv init - fish | source
 end
 
 # volta
 set -gx VOLTA_HOME "$HOME/.volta"
 if test -d $VOLTA_HOME
-  set fish_user_paths $VOLTA_HOME/bin
+  set -x PATH $VOLTA_HOME/bin $PATH
 end
