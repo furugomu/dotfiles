@@ -7,7 +7,7 @@ if status is-interactive
     command --query direnv; and direnv hook fish | source
 end
 
-set -x PATH $HOME/bin
+set -x PATH $HOME/bin $PATH
 
 # go
 set -x GOPATH $HOME/go
