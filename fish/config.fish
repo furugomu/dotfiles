@@ -1,7 +1,5 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    alias d-c=docker-compose
-    alias g=git
 
     # direnv
     command --query direnv; and direnv hook fish | source
@@ -13,6 +11,7 @@ set -x PATH $HOME/bin $PATH
 set -x GOPATH $HOME/go
 if test -d $GOROOT
     set -x PATH $GOROOT/bin $PATH
+    set -x PATH $GOPATH/bin $PATH
 end
 
 # rbenv
