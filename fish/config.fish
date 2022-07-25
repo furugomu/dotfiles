@@ -27,4 +27,4 @@ if test -d $VOLTA_HOME
 end
 
 # docker rootless
-set -x DOCKER_HOST unix:///{$XDG_RUNTIME_DIR}/docker.sock
+set -x DOCKER_HOST unix://{$XDG_RUNTIME_DIR}/docker.sock
