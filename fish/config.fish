@@ -20,6 +20,14 @@ if test -d $HOME/.rbenv
     rbenv init - fish | source
 end
 
+# pyenv
+set -x PYENV_ROOT $HOME/.pyenv
+if test -d $PYENV_ROOT
+    set -x PATH $PYENV_ROOT/bin $PATH
+    pyenv init - | source
+    status --is-interactive; and source (pyenv virtualenv-init -|psub)
+end
+
 # volta
 set -l VOLTA_HOME "$HOME/.volta"
 if test -d $VOLTA_HOME

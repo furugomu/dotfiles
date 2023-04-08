@@ -2,5 +2,6 @@
 	st = status
 	c = commit
 	co = checkout
+	b = branch
 [grep]
 	lineNumber = true
