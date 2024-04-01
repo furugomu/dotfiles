@@ -8,11 +8,11 @@ end
 set -x PATH $HOME/bin $PATH
 
 # go
-set -x GOPATH $HOME/go
-if test -d $GOROOT
-    set -x PATH $GOROOT/bin $PATH
-    set -x PATH $GOPATH/bin $PATH
-end
+# set -x GOPATH $HOME/go
+# if test -d $GOROOT
+#     set -x PATH $GOROOT/bin $PATH
+#     set -x PATH $GOPATH/bin $PATH
+# end
 
 # rbenv
 if test -d $HOME/.rbenv
@@ -37,7 +37,15 @@ end
 # docker rootless
 set -l rootless_socket $XDG_RUNTIME_DIR/docker.sock
 if test -S $rootless_socket
-    set -x DOCKER_HOST unix://$rootless_socket
+    # set -x DOCKER_HOST unix://$rootless_socket
 else
-    set -x DOCKER_HOST unix:///var/run/docker.sock
+    # set -x DOCKER_HOST unix:///var/run/docker.sock
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# deno
+set --export DENO_INSTALL "$HOME/.deno"
+set --export PATH $DENO_INSTALL/bin $PATH
