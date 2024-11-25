@@ -3,7 +3,7 @@
 dotfiles="$HOME/dotfiles"
 for f in \
   .bashrc .bash_aliases \
-  .gitconfig git-prompt.sh \
+  .gitconfig \
   .tmux.conf \
   .zshrc .zshenv \
 ;do
