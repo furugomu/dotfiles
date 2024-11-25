@@ -83,6 +83,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # git
 source ~/dotfiles/git-completion.bash
+__git_complete g git
 source ~/dotfiles/git-prompt.sh
 PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
 
