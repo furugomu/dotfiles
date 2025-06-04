@@ -36,3 +36,5 @@ path+=node_modules/.bin
 command -v direnv >/dev/null && eval "$(direnv hook zsh)"
 
 [ -f $HOME/.zshenv.$(hostname) ] && source $HOME/.zshenv.$(hostname)
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"

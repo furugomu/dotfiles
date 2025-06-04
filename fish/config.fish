@@ -6,6 +6,7 @@ if status is-interactive
 end
 
 set -x PATH $HOME/bin $PATH
+set -x PATH $HOME/opt/bin $PATH
 
 # go
 # set -x GOPATH $HOME/go
@@ -28,12 +29,6 @@ if test -d $PYENV_ROOT
     status --is-interactive; and source (pyenv virtualenv-init -|psub)
 end
 
-# volta
-set -l VOLTA_HOME "$HOME/.volta"
-if test -d $VOLTA_HOME
-    set -x PATH $VOLTA_HOME/bin $PATH
-end
-
 # docker rootless
 set -l rootless_socket $XDG_RUNTIME_DIR/docker.sock
 if test -S $rootless_socket
@@ -49,3 +44,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 # deno
 set --export DENO_INSTALL "$HOME/.deno"
 set --export PATH $DENO_INSTALL/bin $PATH
+
+#volta
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
