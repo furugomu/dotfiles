@@ -72,7 +72,7 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 
 # aliases
 alias g=git
-alias d-c=docker-compose
+alias d-c='docker compose'
 
 command -v direnv > /dev/null && eval "$(direnv hook bash)"
 
@@ -82,8 +82,20 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # git
-source ~/git-prompt.sh
+source ~/dotfiles/git-completion.bash
+__git_complete g git
+source ~/dotfiles/git-prompt.sh
 PS1='\[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$(__git_ps1 " (%s)")\$ '
 
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+# Added by `rbenv init` on Tue Sep 24 18:06:49 JST 2024
+eval "$(~/.rbenv/bin/rbenv init - --no-rehash bash)"
+
+if [ "$TERM_PROGRAM" = 'vscode' ]; then
+  export EDITOR='code --wait'
+fi
+
+# moonbit
+export PATH="$HOME/.moon/bin:$PATH"

@@ -5,7 +5,7 @@ setopt share_history
 
 # aliases
 alias g=git
-alias d-c=docker-compose
+alias d-c='docker compose'
 
 # vcs_info
 # http://zsh.sourceforge.net/Doc/Release/User-Contributions.html#Version-Control-Information
@@ -28,7 +28,7 @@ SAVEHIST=10000
 bindkey -e
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/nsugimoto/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 autoload -Uz compinit
 compinit
