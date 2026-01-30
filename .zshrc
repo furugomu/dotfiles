@@ -79,6 +79,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+# miseは.zshenvで有効化しているので不要かもしれない
 
 source $ZSH/oh-my-zsh.sh
 
