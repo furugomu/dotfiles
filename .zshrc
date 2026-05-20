@@ -115,3 +115,6 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias g=git
 alias d-c='docker compose'
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

@@ -108,3 +108,6 @@ export PATH="$HOME/.bun/bin:$PATH"
 if [ -f ~/.local/bin/mise ]; then
   eval "$(~/.local/bin/mise activate bash)"
 fi
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"

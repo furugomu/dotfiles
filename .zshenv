@@ -4,3 +4,6 @@ export PATH=$HOME/bin:$HOME/.local/bin:$PATH
 [ -x "$(command -v mise)" ] && eval "$(mise activate zsh)"
 
 # [ -f $HOME/.zshenv.$(hostname) ] && source $HOME/.zshenv.$(hostname)
+
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
