@@ -118,3 +118,6 @@ alias d-c='docker compose'
 
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
+
+# opencode
+export PATH=$HOME/.opencode/bin:$PATH
