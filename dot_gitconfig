@@ -1,0 +1,18 @@
+[alias]
+	st = status
+	c = commit
+	co = checkout
+	b = branch
+[grep]
+	lineNumber = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper = store
+[init]
+	defaultBranch = main
+[includeIf "gitdir:~/hoge/"]
+	path = .gitconfig-hoge
